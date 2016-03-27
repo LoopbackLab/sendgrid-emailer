@@ -3,13 +3,14 @@ var express = require('express');
 var parser = require('body-parser');
 
 var app = express();
-app.use(parser.json());
 app.use(function(req, res, next) {
   res.setHeader('Access-Control-Allow-Headers', 'content-type');
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
   next();
 });
+app.use(parser.json());
+
 
 app.post('/', function (req, res) {
   var params = req.body;
