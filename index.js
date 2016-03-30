@@ -11,23 +11,7 @@ app.use(function(req, res, next) {
 });
 app.use(parser.json());
 
-app.get('/', function (req, res) {
-  res.json({message: 'Hello, World'});
-});
-
-app.post('/', function (req, res) {
-  sendgrid.send(req.body, function(err, json) {
-    // TODO: Send email receipt to sender saying thanks for contacting us, we'll get back shortly
-    if (err) { return res.status(400).send(err.toString()); }
-    res.sendStatus(204);
-  });
-});
-
-app.get('/api', function (req, res) {
-  res.json({message: 'Hello, World'});
-});
-
-app.post('/api', function (req, res) {
+app.post('/api/email', function (req, res) {
   sendgrid.send(req.body, function(err, json) {
     // TODO: Send email receipt to sender saying thanks for contacting us, we'll get back shortly
     if (err) { return res.status(400).send(err.toString()); }
