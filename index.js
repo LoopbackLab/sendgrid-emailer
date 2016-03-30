@@ -23,7 +23,7 @@ app.post('/', function (req, res) {
   }, function(err, json) {
 
     // TODO: Send email receipt to sender saying thanks for contacting us, we'll get back shortly
-    if (err) { return res.sendStatus(400); }
+    if (err) { return res.status(400).json(err); }
     res.sendStatus(204);
   });
 });

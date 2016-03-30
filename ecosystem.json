@@ -15,11 +15,10 @@
     "production" : {
       "user" : "kyle",
       "host" : "159.203.228.108",
-      "forward-agent": true,
       "ref"  : "origin/master",
       "repo" : "git@github.com:LoopbackLab/sendgrid-emailer.git",
       "path" : "/var/www/sendgrid",
-      "post-deploy" : "npm install ; pm2 startOrRestart ecosystem.json --env production",
+      "post-deploy" : "npm install --production ; pm2 startOrRestart ecosystem.json --env production",
       "env"  : {
         "NODE_ENV": "production"
       }
