@@ -1,4 +1,4 @@
-var sendgrid  = require('sendgrid')(process.env.sendgrid || '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');
+var sendgrid  = require('sendgrid')(process.env.SENDGRID_KEY);
 var express = require('express');
 var parser = require('body-parser');
 
