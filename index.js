@@ -5,7 +5,7 @@ var parser = require('body-parser');
 var app = express();
 app.use(function(req, res, next) {
   res.setHeader('Access-Control-Allow-Headers', 'content-type');
-  res.setHeader('Access-Control-Allow-Origin', 'staging.loopbacklab.com, loopbacklab.com');
+  res.setHeader('Access-Control-Allow-Origin', '*.loopbacklab.com');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
   next();
 });
