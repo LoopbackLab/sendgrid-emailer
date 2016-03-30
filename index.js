@@ -21,7 +21,7 @@ app.post('/', function (req, res) {
     subject: 'New Potential Client: ' + params.name,
     text: params.text
   }, function(err, json) {
-
+    console.log(err, json);
     // TODO: Send email receipt to sender saying thanks for contacting us, we'll get back shortly
     if (err) { return res.status(400).json(err); }
     res.sendStatus(204);
