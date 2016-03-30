@@ -29,4 +29,4 @@ app.post('/', function (req, res) {
 });
 
 console.log('Wassup World!');
-app.listen(process.env.PORT || 9000);
+app.listen(9000);
