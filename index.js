@@ -22,9 +22,12 @@ app.post('/', function (req, res) {
     subject: 'New Potential Client: ' + params.name,
     text: params.text
   }, function(err, json) {
+
+    // TODO: Send email receipt to sender saying thanks for contacting us, we'll get back shortly
     if (err) { return res.sendStatus(400); }
     res.sendStatus(204);
   });
 });
 
+console.log('Wassup World!');
 app.listen(process.env.PORT || 9000);
