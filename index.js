@@ -14,7 +14,6 @@ app.use(parser.json());
 
 app.post('/', function (req, res) {
   var params = req.body;
-  console.log(params);
   sendgrid.send({
     to: 'kyle@loopbacklab.com',
     from: params.from,
