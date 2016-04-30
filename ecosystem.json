@@ -14,7 +14,7 @@
   "deploy": {
     "production" : {
       "user" : "kyle",
-      "host" : "159.203.228.108",
+      "host" : "104.131.152.30",
       "ref"  : "origin/master",
       "repo" : "git@github.com:LoopbackLab/sendgrid-emailer.git",
       "path" : "/var/www/sendgrid",
@@ -25,7 +25,7 @@
     },
     "staging" : {
       "user" : "kyle",
-      "host" : "159.203.228.108",
+      "host" : "104.131.152.30",
       "ref"  : "origin/develop",
       "repo" : "git@github.com:LoopbackLab/sendgrid-emailer.git",
       "path" : "/var/www/staging-sendgrid",
